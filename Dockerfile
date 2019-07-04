@@ -1,6 +1,6 @@
 FROM node:10.16.0-alpine
 
-RUN mkir /app
+RUN mkdir /app
 WORKDIR /app
 
 RUN echo "unsafe-perm = true" >> ~/.npmrc
