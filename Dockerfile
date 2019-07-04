@@ -1,5 +1,20 @@
 FROM node:10.16.0-alpine
 
+RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories && apk update && \
+    apk add --no-cache bash \
+    openssh-client \
+    wget \
+    curl \
+    bc \
+    gcc \
+    python \
+    python-dev \
+    py-pip \
+    openssl-dev \
+    ca-certificates \
+    git \
+    make
+    
 RUN mkdir /app
 WORKDIR /app
 
